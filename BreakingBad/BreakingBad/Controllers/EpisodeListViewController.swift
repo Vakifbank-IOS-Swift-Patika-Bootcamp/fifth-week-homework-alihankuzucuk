@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EpisodeListViewController.swift
 //  BreakingBad
 //
 //  Created by Alihan KUZUCUK on 22.11.2022.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class EpisodeListViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
 }
-

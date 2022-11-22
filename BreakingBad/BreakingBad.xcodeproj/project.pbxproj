@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		C3320D83292D1877002A32AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D82292D1877002A32AA /* AppDelegate.swift */; };
 		C3320D85292D1877002A32AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D84292D1877002A32AA /* SceneDelegate.swift */; };
-		C3320D87292D1877002A32AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D86292D1877002A32AA /* ViewController.swift */; };
 		C3320D8A292D1877002A32AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3320D88292D1877002A32AA /* Main.storyboard */; };
 		C3320D8C292D1878002A32AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3320D8B292D1878002A32AA /* Assets.xcassets */; };
 		C3320D8F292D1878002A32AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3320D8D292D1878002A32AA /* LaunchScreen.storyboard */; };
+		C3320D9C292D216A002A32AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D9B292D216A002A32AA /* BaseViewController.swift */; };
+		C3320D9F292D21A7002A32AA /* MaterialActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = C3320D9E292D21A7002A32AA /* MaterialActivityIndicator */; };
+		C3320DA2292D21C1002A32AA /* SwiftAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = C3320DA1292D21C1002A32AA /* SwiftAlertView */; };
+		C3320DA4292D275E002A32AA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DA3292D275E002A32AA /* Client.swift */; };
+		C3320DA8292D2A74002A32AA /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DA7292D2A74002A32AA /* CharacterModel.swift */; };
+		C3320DAA292D32C0002A32AA /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DA9292D32C0002A32AA /* CharactersCollectionViewController.swift */; };
+		C3320DAE292D4A25002A32AA /* CharacterQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DAD292D4A25002A32AA /* CharacterQuoteModel.swift */; };
+		C3320DB0292D4CBA002A32AA /* EpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DAF292D4CBA002A32AA /* EpisodeModel.swift */; };
+		C3320DB2292D4FFA002A32AA /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DB1292D4FFA002A32AA /* EpisodeListViewController.swift */; };
+		C3320DB4292D504D002A32AA /* IMDBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DB3292D504D002A32AA /* IMDBPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C3320D7F292D1877002A32AA /* BreakingBad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3320D82292D1877002A32AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3320D84292D1877002A32AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3320D86292D1877002A32AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3320D89292D1877002A32AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3320D8B292D1878002A32AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3320D8E292D1878002A32AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3320D90292D1878002A32AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3320D9B292D216A002A32AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C3320DA3292D275E002A32AA /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		C3320DA7292D2A74002A32AA /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		C3320DA9292D32C0002A32AA /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
+		C3320DAD292D4A25002A32AA /* CharacterQuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterQuoteModel.swift; sourceTree = "<group>"; };
+		C3320DAF292D4CBA002A32AA /* EpisodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModel.swift; sourceTree = "<group>"; };
+		C3320DB1292D4FFA002A32AA /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
+		C3320DB3292D504D002A32AA /* IMDBPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3320DA2292D21C1002A32AA /* SwiftAlertView in Frameworks */,
+				C3320D9F292D21A7002A32AA /* MaterialActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +74,70 @@
 		C3320D81292D1877002A32AA /* BreakingBad */ = {
 			isa = PBXGroup;
 			children = (
-				C3320D82292D1877002A32AA /* AppDelegate.swift */,
-				C3320D84292D1877002A32AA /* SceneDelegate.swift */,
-				C3320D86292D1877002A32AA /* ViewController.swift */,
-				C3320D88292D1877002A32AA /* Main.storyboard */,
-				C3320D8B292D1878002A32AA /* Assets.xcassets */,
-				C3320D8D292D1878002A32AA /* LaunchScreen.storyboard */,
+				C3320D96292D1B31002A32AA /* App */,
+				C3320D99292D1B48002A32AA /* Service */,
+				C3320D97292D1B37002A32AA /* Controllers */,
+				C3320D98292D1B3F002A32AA /* Models */,
+				C3320D9A292D1B50002A32AA /* Views */,
 				C3320D90292D1878002A32AA /* Info.plist */,
 			);
 			path = BreakingBad;
+			sourceTree = "<group>";
+		};
+		C3320D96292D1B31002A32AA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C3320D82292D1877002A32AA /* AppDelegate.swift */,
+				C3320D84292D1877002A32AA /* SceneDelegate.swift */,
+				C3320D88292D1877002A32AA /* Main.storyboard */,
+				C3320D8B292D1878002A32AA /* Assets.xcassets */,
+				C3320D8D292D1878002A32AA /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C3320D97292D1B37002A32AA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3320D9B292D216A002A32AA /* BaseViewController.swift */,
+				C3320DA9292D32C0002A32AA /* CharactersCollectionViewController.swift */,
+				C3320DB1292D4FFA002A32AA /* EpisodeListViewController.swift */,
+				C3320DB3292D504D002A32AA /* IMDBPageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C3320D98292D1B3F002A32AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3320DB5292D519C002A32AA /* ApiModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3320D99292D1B48002A32AA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C3320DA3292D275E002A32AA /* Client.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C3320D9A292D1B50002A32AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C3320DB5292D519C002A32AA /* ApiModels */ = {
+			isa = PBXGroup;
+			children = (
+				C3320DA7292D2A74002A32AA /* CharacterModel.swift */,
+				C3320DAD292D4A25002A32AA /* CharacterQuoteModel.swift */,
+				C3320DAF292D4CBA002A32AA /* EpisodeModel.swift */,
+			);
+			path = ApiModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +156,10 @@
 			dependencies = (
 			);
 			name = BreakingBad;
+			packageProductDependencies = (
+				C3320D9E292D21A7002A32AA /* MaterialActivityIndicator */,
+				C3320DA1292D21C1002A32AA /* SwiftAlertView */,
+			);
 			productName = BreakingBad;
 			productReference = C3320D7F292D1877002A32AA /* BreakingBad.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +188,10 @@
 				Base,
 			);
 			mainGroup = C3320D76292D1877002A32AA;
+			packageReferences = (
+				C3320D9D292D21A7002A32AA /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */,
+				C3320DA0292D21C1002A32AA /* XCRemoteSwiftPackageReference "SwiftAlertView" */,
+			);
 			productRefGroup = C3320D80292D1877002A32AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +219,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3320D87292D1877002A32AA /* ViewController.swift in Sources */,
+				C3320DAA292D32C0002A32AA /* CharactersCollectionViewController.swift in Sources */,
+				C3320DAE292D4A25002A32AA /* CharacterQuoteModel.swift in Sources */,
 				C3320D83292D1877002A32AA /* AppDelegate.swift in Sources */,
 				C3320D85292D1877002A32AA /* SceneDelegate.swift in Sources */,
+				C3320DA4292D275E002A32AA /* Client.swift in Sources */,
+				C3320DA8292D2A74002A32AA /* CharacterModel.swift in Sources */,
+				C3320DB2292D4FFA002A32AA /* EpisodeListViewController.swift in Sources */,
+				C3320DB4292D504D002A32AA /* IMDBPageViewController.swift in Sources */,
+				C3320D9C292D216A002A32AA /* BaseViewController.swift in Sources */,
+				C3320DB0292D4CBA002A32AA /* EpisodeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +446,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3320D9D292D21A7002A32AA /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nspavlo/MaterialActivityIndicator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.7;
+			};
+		};
+		C3320DA0292D21C1002A32AA /* XCRemoteSwiftPackageReference "SwiftAlertView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dinhquan/SwiftAlertView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3320D9E292D21A7002A32AA /* MaterialActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3320D9D292D21A7002A32AA /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */;
+			productName = MaterialActivityIndicator;
+		};
+		C3320DA1292D21C1002A32AA /* SwiftAlertView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3320DA0292D21C1002A32AA /* XCRemoteSwiftPackageReference "SwiftAlertView" */;
+			productName = SwiftAlertView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3320D77292D1877002A32AA /* Project object */;
 }
