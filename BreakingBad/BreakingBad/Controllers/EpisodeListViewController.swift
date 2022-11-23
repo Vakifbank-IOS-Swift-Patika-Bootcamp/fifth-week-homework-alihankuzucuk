@@ -7,8 +7,9 @@
 
 import UIKit
 
-final class EpisodeListViewController: BaseViewController {
+final class EpisodeListViewController: BaseViewController, EpisodeListViewControllerProtocol {
 
+    // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -16,12 +17,14 @@ final class EpisodeListViewController: BaseViewController {
         }
     }
     
+    // MARK: - Variables
     private var episodes: [EpisodeModel]? {
         didSet {
             tableView.reloadData()
         }
     }
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,12 +34,24 @@ final class EpisodeListViewController: BaseViewController {
         }
     }
     
+    // MARK: - Overrides
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "segueEpisodeCharacters" {
+            guard let vcEpisodeCharacters = segue.destination as? EpisodeCharactersViewController else { return }
+            vcEpisodeCharacters.delegate = self
+        }
+    }
+    
+    // MARK: - Methods
+    func btnCloseEpisodeCharactersViewClicked() {
+        showAlertView(title: "Delegate Triggered", message: "EpisodeCharactersView screen closed") {
+            print("Delegate Triggered - EpisodeCharactersView screen closed")
+        }
     }
 
 }
 
+// MARK: - Extension: TableView
 extension EpisodeListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,7 +78,7 @@ extension EpisodeListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueShowEpisodeCharacters", sender: nil)
+        performSegue(withIdentifier: "segueEpisodeCharacters", sender: nil)
     }
     
 }

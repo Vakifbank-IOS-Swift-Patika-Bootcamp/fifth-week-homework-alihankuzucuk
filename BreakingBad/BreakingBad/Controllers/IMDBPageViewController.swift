@@ -9,6 +9,7 @@ import UIKit
 
 final class IMDBPageViewController: BaseViewController {
 
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         

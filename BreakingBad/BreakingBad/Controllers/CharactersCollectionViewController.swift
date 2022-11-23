@@ -9,6 +9,7 @@ import UIKit
 
 final class CharactersCollectionViewController: BaseViewController {
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

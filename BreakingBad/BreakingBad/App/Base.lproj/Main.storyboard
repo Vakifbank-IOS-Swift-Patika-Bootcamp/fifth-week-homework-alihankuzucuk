@@ -49,17 +49,17 @@
                     <tabBarItem key="tabBarItem" title="Episodes" image="e.circle.fill" catalog="system" id="yI5-0j-zfN"/>
                     <connections>
                         <outlet property="tableView" destination="jKF-lS-Zkd" id="x8Y-1D-BEf"/>
-                        <segue destination="gcF-2e-Y7a" kind="showDetail" identifier="segueShowEpisodeCharacters" id="r4U-A7-wXD"/>
+                        <segue destination="gcF-2e-Y7a" kind="showDetail" identifier="segueEpisodeCharacters" id="r4U-A7-wXD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESV-uv-a8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1418" y="258"/>
         </scene>
-        <!--Show Episode Characters View Controller-->
+        <!--Episode Characters View Controller-->
         <scene sceneID="TDr-ZX-01S">
             <objects>
-                <viewController id="gcF-2e-Y7a" customClass="ShowEpisodeCharactersViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gcF-2e-Y7a" customClass="EpisodeCharactersViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nlB-bp-X3g">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

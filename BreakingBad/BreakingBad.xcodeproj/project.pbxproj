@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C329E29F292DE94300E0208B /* EpisodeModelUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329E29E292DE94300E0208B /* EpisodeModelUtility.swift */; };
-		C329E2A1292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329E2A0292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift */; };
+		C329E2A1292DF8EC00E0208B /* EpisodeCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329E2A0292DF8EC00E0208B /* EpisodeCharactersViewController.swift */; };
+		C329E2A7292E019700E0208B /* EpisodeListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329E2A6292E019700E0208B /* EpisodeListViewControllerProtocol.swift */; };
 		C3320D83292D1877002A32AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D82292D1877002A32AA /* AppDelegate.swift */; };
 		C3320D85292D1877002A32AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D84292D1877002A32AA /* SceneDelegate.swift */; };
 		C3320D8A292D1877002A32AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3320D88292D1877002A32AA /* Main.storyboard */; };
@@ -28,7 +29,8 @@
 
 /* Begin PBXFileReference section */
 		C329E29E292DE94300E0208B /* EpisodeModelUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelUtility.swift; sourceTree = "<group>"; };
-		C329E2A0292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEpisodeCharactersViewController.swift; sourceTree = "<group>"; };
+		C329E2A0292DF8EC00E0208B /* EpisodeCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCharactersViewController.swift; sourceTree = "<group>"; };
+		C329E2A6292E019700E0208B /* EpisodeListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C3320D7F292D1877002A32AA /* BreakingBad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3320D82292D1877002A32AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3320D84292D1877002A32AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,22 @@
 			path = ApiModelUtilities;
 			sourceTree = "<group>";
 		};
+		C329E2A2292E009900E0208B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C329E2A3292E00B000E0208B /* ControllerProtocols */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C329E2A3292E00B000E0208B /* ControllerProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				C329E2A6292E019700E0208B /* EpisodeListViewControllerProtocol.swift */,
+			);
+			path = ControllerProtocols;
+			sourceTree = "<group>";
+		};
 		C3320D76292D1877002A32AA = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +150,7 @@
 				C3320DA9292D32C0002A32AA /* CharactersCollectionViewController.swift */,
 				C3320DB1292D4FFA002A32AA /* EpisodeListViewController.swift */,
 				C3320DB3292D504D002A32AA /* IMDBPageViewController.swift */,
-				C329E2A0292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift */,
+				C329E2A0292DF8EC00E0208B /* EpisodeCharactersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -141,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				C3320DB5292D519C002A32AA /* ApiModels */,
+				C329E2A2292E009900E0208B /* Protocols */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,7 +273,8 @@
 				C3320D83292D1877002A32AA /* AppDelegate.swift in Sources */,
 				C3320D85292D1877002A32AA /* SceneDelegate.swift in Sources */,
 				C3320DA4292D275E002A32AA /* Client.swift in Sources */,
-				C329E2A1292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift in Sources */,
+				C329E2A7292E019700E0208B /* EpisodeListViewControllerProtocol.swift in Sources */,
+				C329E2A1292DF8EC00E0208B /* EpisodeCharactersViewController.swift in Sources */,
 				C3320DA8292D2A74002A32AA /* CharacterModel.swift in Sources */,
 				C329E29F292DE94300E0208B /* EpisodeModelUtility.swift in Sources */,
 				C3320DB2292D4FFA002A32AA /* EpisodeListViewController.swift in Sources */,
