@@ -30,6 +30,7 @@
 		C3320DB2292D4FFA002A32AA /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DB1292D4FFA002A32AA /* EpisodeListViewController.swift */; };
 		C3320DB4292D504D002A32AA /* IMDBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320DB3292D504D002A32AA /* IMDBPageViewController.swift */; };
 		C398330B292E55FD00C7C23B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C398330A292E55FD00C7C23B /* CharacterDetailViewController.swift */; };
+		C398330E292E727300C7C23B /* CharacterQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C398330D292E727300C7C23B /* CharacterQuotesViewController.swift */; };
 		C3E85F56292E44F60060E551 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E85F55292E44F60060E551 /* CharacterCollectionViewCell.swift */; };
 		C3E85F59292E4E380060E551 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E85F58292E4E380060E551 /* UIExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		C3320DB1292D4FFA002A32AA /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
 		C3320DB3292D504D002A32AA /* IMDBPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBPageViewController.swift; sourceTree = "<group>"; };
 		C398330A292E55FD00C7C23B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		C398330D292E727300C7C23B /* CharacterQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterQuotesViewController.swift; sourceTree = "<group>"; };
 		C3E85F55292E44F60060E551 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3E85F58292E4E380060E551 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				C398330A292E55FD00C7C23B /* CharacterDetailViewController.swift */,
+				C398330D292E727300C7C23B /* CharacterQuotesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				C398330B292E55FD00C7C23B /* CharacterDetailViewController.swift in Sources */,
 				C3320DA4292D275E002A32AA /* Client.swift in Sources */,
 				C329E2A7292E019700E0208B /* EpisodeListViewControllerProtocol.swift in Sources */,
+				C398330E292E727300C7C23B /* CharacterQuotesViewController.swift in Sources */,
 				C329E2A1292DF8EC00E0208B /* EpisodeCharactersViewController.swift in Sources */,
 				C3320DA8292D2A74002A32AA /* CharacterModel.swift in Sources */,
 				C329E29F292DE94300E0208B /* EpisodeModelUtility.swift in Sources */,

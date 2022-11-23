@@ -16,10 +16,29 @@
                     <view key="view" contentMode="scaleToFill" id="ldG-kv-Alv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Rf-hA-iaA">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="adU-qM-6OC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Rf-hA-iaA" firstAttribute="leading" secondItem="adU-qM-6OC" secondAttribute="leading" id="Bcu-Xo-nvo"/>
+                            <constraint firstItem="adU-qM-6OC" firstAttribute="bottom" secondItem="4Rf-hA-iaA" secondAttribute="bottom" id="CJA-JZ-0Lc"/>
+                            <constraint firstItem="adU-qM-6OC" firstAttribute="trailing" secondItem="4Rf-hA-iaA" secondAttribute="trailing" id="WS4-jw-5tL"/>
+                            <constraint firstItem="4Rf-hA-iaA" firstAttribute="top" secondItem="adU-qM-6OC" secondAttribute="top" id="gT7-em-8t5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="iMDB" image="i.circle.fill" catalog="system" id="lXa-zL-u4s"/>
+                    <connections>
+                        <outlet property="webview" destination="4Rf-hA-iaA" id="ElS-x6-ziA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukN-3q-CKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +121,7 @@
         <!--Characters-->
         <scene sceneID="i7t-EL-4H0">
             <objects>
-                <viewController storyboardIdentifier="BreakingBadTabBar" id="eCj-pU-kPw" customClass="CharactersCollectionViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eCj-pU-kPw" customClass="CharactersCollectionViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8fC-8n-inK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,6 +290,14 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C76-RQ-OBu">
+                                                        <rect key="frame" x="10" y="592" width="373" height="34.333333333333371"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="See Quotes"/>
+                                                        <connections>
+                                                            <action selector="btnSeeQuotesClicked:" destination="vDE-aS-TUD" eventType="touchUpInside" id="VMN-tG-640"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -285,15 +312,18 @@
                                                     <constraint firstItem="kBQ-v1-Mcy" firstAttribute="top" secondItem="neP-wg-aZg" secondAttribute="top" constant="10" id="Hac-UR-brk"/>
                                                     <constraint firstAttribute="trailing" secondItem="ot4-WA-Dfs" secondAttribute="trailing" constant="10" id="OEY-eC-Jga"/>
                                                     <constraint firstItem="ot4-WA-Dfs" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="QIN-Lw-YKh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C76-RQ-OBu" secondAttribute="trailing" constant="10" id="V7w-zP-tM5"/>
                                                     <constraint firstItem="V3Z-K5-Snx" firstAttribute="top" secondItem="9fh-ev-hlC" secondAttribute="bottom" constant="20" id="VPx-Su-eBf"/>
                                                     <constraint firstItem="hSR-RX-O9B" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="VeV-p8-sSD"/>
                                                     <constraint firstItem="9fh-ev-hlC" firstAttribute="top" secondItem="sPA-ld-633" secondAttribute="bottom" constant="20" id="Wy8-rH-BMT"/>
                                                     <constraint firstItem="V3Z-K5-Snx" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="Zd2-wu-3bf"/>
                                                     <constraint firstItem="ot4-WA-Dfs" firstAttribute="top" secondItem="V3Z-K5-Snx" secondAttribute="bottom" constant="20" id="Zmf-n5-YaF"/>
                                                     <constraint firstItem="kBQ-v1-Mcy" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="jD5-f6-PRg"/>
+                                                    <constraint firstItem="C76-RQ-OBu" firstAttribute="top" secondItem="Mma-cT-ke9" secondAttribute="bottom" constant="20" id="mhs-Fs-qpR"/>
                                                     <constraint firstItem="sPA-ld-633" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="nUe-Gm-Xh3"/>
                                                     <constraint firstAttribute="trailing" secondItem="V3Z-K5-Snx" secondAttribute="trailing" constant="10" id="o1Q-5v-T1v"/>
                                                     <constraint firstItem="Mma-cT-ke9" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="u7o-RV-8hL"/>
+                                                    <constraint firstItem="C76-RQ-OBu" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="xVD-rI-ClB"/>
                                                     <constraint firstItem="9fh-ev-hlC" firstAttribute="leading" secondItem="neP-wg-aZg" secondAttribute="leading" constant="10" id="y4g-x0-TAT"/>
                                                 </constraints>
                                             </view>
@@ -327,11 +357,43 @@
                         <outlet property="lblCharacterOccupation" destination="9fh-ev-hlC" id="Ef5-SU-P80"/>
                         <outlet property="lblCharacterPortrayed" destination="Mma-cT-ke9" id="wiL-ZI-L5x"/>
                         <outlet property="lblCharacterStatus" destination="V3Z-K5-Snx" id="aB6-Mi-1bN"/>
+                        <segue destination="N4j-Co-PrV" kind="presentation" identifier="segueToCharacterQuotes" modalPresentationStyle="fullScreen" id="ycL-8Y-rDH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uq7-Ju-6T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647" y="-387"/>
+        </scene>
+        <!--Character Quotes View Controller-->
+        <scene sceneID="3Py-2O-3yx">
+            <objects>
+                <viewController id="N4j-Co-PrV" customClass="CharacterQuotesViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vmL-Dh-X4r">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KSS-SJ-tgS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M6X-Dy-Ntx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KSS-SJ-tgS" firstAttribute="top" secondItem="M6X-Dy-Ntx" secondAttribute="top" id="9O3-4Z-6Dg"/>
+                            <constraint firstItem="KSS-SJ-tgS" firstAttribute="leading" secondItem="M6X-Dy-Ntx" secondAttribute="leading" id="E4c-3c-cuK"/>
+                            <constraint firstItem="M6X-Dy-Ntx" firstAttribute="bottom" secondItem="KSS-SJ-tgS" secondAttribute="bottom" id="afE-z0-3uT"/>
+                            <constraint firstItem="M6X-Dy-Ntx" firstAttribute="trailing" secondItem="KSS-SJ-tgS" secondAttribute="trailing" id="gZE-2f-U6X"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7jw-ZA-Cyq"/>
+                    <connections>
+                        <outlet property="tableView" destination="KSS-SJ-tgS" id="VPg-JR-6uv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b06-7r-Rpu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="-387"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="a6Q-Hj-11d">

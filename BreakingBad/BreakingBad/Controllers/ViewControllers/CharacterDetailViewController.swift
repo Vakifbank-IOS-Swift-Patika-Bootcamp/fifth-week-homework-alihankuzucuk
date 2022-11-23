@@ -41,5 +41,16 @@ final class CharacterDetailViewController: BaseViewController {
             self.lblCharacterPortrayed.text = "Portrayed: " + (characterDetail.first?.characterPortrayed ?? "")
         }
     }
+    
+    @IBAction func btnSeeQuotesClicked(_ sender: Any) {
+        performSegue(withIdentifier: "segueToCharacterQuotes", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToCharacterQuotes" {
+            guard let vcCharacterQuotes = segue.destination as? CharacterQuotesViewController else { return }
+            vcCharacterQuotes.character = detailedCharacterName
+        }
+    }
 
 }
