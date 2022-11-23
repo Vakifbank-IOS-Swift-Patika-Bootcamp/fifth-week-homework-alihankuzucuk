@@ -28,9 +28,10 @@ final class EpisodeListViewController: BaseViewController, EpisodeListViewContro
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        indicator.startAnimating()
         Client.getAllEpisodes { [weak self] episodes, error in
             guard let self = self else { return }
+            self.indicator.stopAnimating()
             self.episodes = episodes
         }
     }

@@ -16,6 +16,7 @@ final class CharacterTableViewCell: UITableViewCell {
     @IBOutlet private weak var lblCharacterOccupation: UILabel!
     @IBOutlet private weak var lblCharacterStatus: UILabel!
     @IBOutlet private weak var lblCharacterNickname: UILabel!
+    @IBOutlet private weak var lblCharacterPortrayed: UILabel!
     
     func configureCell(characterName: String) {
         
@@ -29,6 +30,7 @@ final class CharacterTableViewCell: UITableViewCell {
             self.lblCharacterOccupation.text = "Occupation:\n" + (characterDetail.first?.characterOccupation.first ?? "")
             self.lblCharacterStatus.text = "Status:\n" + (characterDetail.first?.characterStatus ?? "")
             self.lblCharacterNickname.text = "Nickname:\n" + (characterDetail.first?.characterNickname ?? "")
+            self.lblCharacterPortrayed.text = "Portrayed:\n" + (characterDetail.first?.characterPortrayed ?? "")
         }
         
     }
