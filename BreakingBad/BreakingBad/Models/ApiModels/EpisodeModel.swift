@@ -13,16 +13,16 @@ struct EpisodeModel: Codable {
     let episodeSeason: String
     let episodeAirDate: String
     let episodeCharacters: [String]
-    let episodeName: String
+    let episodeInSeason: String
     let episodeSeries: String
 
     enum CodingKeys: String, CodingKey {
         case episodeId = "episode_id"
         case episodeTitle = "title"
         case episodeSeason = "season"
-        case episodeAirDate = "airDate"
+        case episodeAirDate = "air_date"
         case episodeCharacters = "characters"
-        case episodeName = "episode"
+        case episodeInSeason = "episode"
         case episodeSeries = "series"
     }
     
@@ -33,7 +33,7 @@ struct EpisodeModel: Codable {
         episodeSeason = try values.decodeIfPresent(String.self, forKey: .episodeSeason) ?? ""
         episodeAirDate = try values.decodeIfPresent(String.self, forKey: .episodeAirDate) ?? ""
         episodeCharacters = try values.decodeIfPresent([String].self, forKey: .episodeCharacters) ?? []
-        episodeName = try values.decodeIfPresent(String.self, forKey: .episodeName) ?? ""
+        episodeInSeason = try values.decodeIfPresent(String.self, forKey: .episodeInSeason) ?? ""
         episodeSeries = try values.decodeIfPresent(String.self, forKey: .episodeSeries) ?? ""
     }
 }

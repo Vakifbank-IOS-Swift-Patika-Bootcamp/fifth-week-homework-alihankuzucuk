@@ -31,14 +31,72 @@
                     <view key="view" contentMode="scaleToFill" id="fGO-hP-zj7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jKF-lS-Zkd">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ULp-Fz-U0p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jKF-lS-Zkd" firstAttribute="leading" secondItem="ULp-Fz-U0p" secondAttribute="leading" id="0GE-V6-L8w"/>
+                            <constraint firstItem="ULp-Fz-U0p" firstAttribute="trailing" secondItem="jKF-lS-Zkd" secondAttribute="trailing" id="WU8-9F-Rck"/>
+                            <constraint firstItem="ULp-Fz-U0p" firstAttribute="bottom" secondItem="jKF-lS-Zkd" secondAttribute="bottom" id="XmQ-qc-S2E"/>
+                            <constraint firstItem="jKF-lS-Zkd" firstAttribute="top" secondItem="ULp-Fz-U0p" secondAttribute="top" id="njl-Kj-ETt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Episodes" image="e.circle.fill" catalog="system" id="yI5-0j-zfN"/>
+                    <connections>
+                        <outlet property="tableView" destination="jKF-lS-Zkd" id="x8Y-1D-BEf"/>
+                        <segue destination="gcF-2e-Y7a" kind="showDetail" identifier="segueShowEpisodeCharacters" id="r4U-A7-wXD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESV-uv-a8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1418" y="258"/>
+        </scene>
+        <!--Show Episode Characters View Controller-->
+        <scene sceneID="TDr-ZX-01S">
+            <objects>
+                <viewController id="gcF-2e-Y7a" customClass="ShowEpisodeCharactersViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nlB-bp-X3g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ASR-He-UPa">
+                                <rect key="frame" x="0.0" y="104" width="393" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BF-Wa-P1J">
+                                <rect key="frame" x="16" y="59" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <action selector="btnCloseClicked:" destination="gcF-2e-Y7a" eventType="touchUpInside" id="jRw-6u-4ut"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kmz-qw-yIW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ASR-He-UPa" firstAttribute="top" secondItem="3BF-Wa-P1J" secondAttribute="bottom" constant="10" id="53R-2w-tw2"/>
+                            <constraint firstItem="ASR-He-UPa" firstAttribute="trailing" secondItem="kmz-qw-yIW" secondAttribute="trailing" id="CH1-Df-03S"/>
+                            <constraint firstItem="3BF-Wa-P1J" firstAttribute="leading" secondItem="nlB-bp-X3g" secondAttribute="leadingMargin" id="Gev-JQ-6T2"/>
+                            <constraint firstItem="3BF-Wa-P1J" firstAttribute="trailing" secondItem="nlB-bp-X3g" secondAttribute="trailingMargin" id="HPv-AK-lIz"/>
+                            <constraint firstItem="3BF-Wa-P1J" firstAttribute="top" secondItem="nlB-bp-X3g" secondAttribute="topMargin" id="crG-B7-fDC"/>
+                            <constraint firstItem="ASR-He-UPa" firstAttribute="bottom" secondItem="kmz-qw-yIW" secondAttribute="bottom" id="mqg-pG-Pny"/>
+                            <constraint firstItem="ASR-He-UPa" firstAttribute="leading" secondItem="kmz-qw-yIW" secondAttribute="leading" id="vTR-Yu-3dt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnClose" destination="3BF-Wa-P1J" id="FAl-vo-hv2"/>
+                        <outlet property="tableView" destination="ASR-He-UPa" id="NaW-KK-bLK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PnF-M7-UDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2817.5572519083967" y="257.04225352112678"/>
         </scene>
         <!--Characters-->
         <scene sceneID="i7t-EL-4H0">

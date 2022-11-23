@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C329E29F292DE94300E0208B /* EpisodeModelUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329E29E292DE94300E0208B /* EpisodeModelUtility.swift */; };
+		C329E2A1292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329E2A0292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift */; };
 		C3320D83292D1877002A32AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D82292D1877002A32AA /* AppDelegate.swift */; };
 		C3320D85292D1877002A32AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3320D84292D1877002A32AA /* SceneDelegate.swift */; };
 		C3320D8A292D1877002A32AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3320D88292D1877002A32AA /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C329E29E292DE94300E0208B /* EpisodeModelUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelUtility.swift; sourceTree = "<group>"; };
+		C329E2A0292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEpisodeCharactersViewController.swift; sourceTree = "<group>"; };
 		C3320D7F292D1877002A32AA /* BreakingBad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3320D82292D1877002A32AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3320D84292D1877002A32AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C329E29B292DE8D000E0208B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C329E29C292DE90600E0208B /* ModelUtilities */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C329E29C292DE90600E0208B /* ModelUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				C329E29D292DE91100E0208B /* ApiModelUtilities */,
+			);
+			path = ModelUtilities;
+			sourceTree = "<group>";
+		};
+		C329E29D292DE91100E0208B /* ApiModelUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				C329E29E292DE94300E0208B /* EpisodeModelUtility.swift */,
+			);
+			path = ApiModelUtilities;
+			sourceTree = "<group>";
+		};
 		C3320D76292D1877002A32AA = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +106,7 @@
 				C3320D99292D1B48002A32AA /* Service */,
 				C3320D97292D1B37002A32AA /* Controllers */,
 				C3320D98292D1B3F002A32AA /* Models */,
+				C329E29B292DE8D000E0208B /* Utilities */,
 				C3320D9A292D1B50002A32AA /* Views */,
 				C3320D90292D1878002A32AA /* Info.plist */,
 			);
@@ -103,6 +132,7 @@
 				C3320DA9292D32C0002A32AA /* CharactersCollectionViewController.swift */,
 				C3320DB1292D4FFA002A32AA /* EpisodeListViewController.swift */,
 				C3320DB3292D504D002A32AA /* IMDBPageViewController.swift */,
+				C329E2A0292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,7 +254,9 @@
 				C3320D83292D1877002A32AA /* AppDelegate.swift in Sources */,
 				C3320D85292D1877002A32AA /* SceneDelegate.swift in Sources */,
 				C3320DA4292D275E002A32AA /* Client.swift in Sources */,
+				C329E2A1292DF8EC00E0208B /* ShowEpisodeCharactersViewController.swift in Sources */,
 				C3320DA8292D2A74002A32AA /* CharacterModel.swift in Sources */,
+				C329E29F292DE94300E0208B /* EpisodeModelUtility.swift in Sources */,
 				C3320DB2292D4FFA002A32AA /* EpisodeListViewController.swift in Sources */,
 				C3320DB4292D504D002A32AA /* IMDBPageViewController.swift in Sources */,
 				C3320D9C292D216A002A32AA /* BaseViewController.swift in Sources */,
