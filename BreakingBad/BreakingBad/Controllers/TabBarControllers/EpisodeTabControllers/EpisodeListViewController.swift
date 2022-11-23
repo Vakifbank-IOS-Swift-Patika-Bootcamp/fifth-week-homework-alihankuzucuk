@@ -23,6 +23,7 @@ final class EpisodeListViewController: BaseViewController, EpisodeListViewContro
             tableView.reloadData()
         }
     }
+    private var selectedEpisodeCharacters: [String]?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -39,6 +40,7 @@ final class EpisodeListViewController: BaseViewController, EpisodeListViewContro
         if segue.identifier == "segueEpisodeCharacters" {
             guard let vcEpisodeCharacters = segue.destination as? EpisodeCharactersViewController else { return }
             vcEpisodeCharacters.delegate = self
+            vcEpisodeCharacters.episodeCharacters = selectedEpisodeCharacters
         }
     }
     
@@ -78,6 +80,7 @@ extension EpisodeListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedEpisodeCharacters = EpisodeModelUtility.getEpisodeCharactersOf(list: episodes, in: indexPath.section + 1, which: indexPath.row + 1)
         performSegue(withIdentifier: "segueEpisodeCharacters", sender: nil)
     }
     

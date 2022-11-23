@@ -70,4 +70,27 @@ final class EpisodeModelUtility {
         return selectedEpisode
     }
     
+    
+    /// This method returns characters of selected episode
+    /// - Parameters:
+    ///   - list: List of episodes which type of EpisodeModel
+    ///   - season: Season which requested
+    ///   - episodeInSeason: Episode which requested
+    /// - Returns: String array of Character names
+    class func getEpisodeCharactersOf(list: [EpisodeModel]?, in season: Int, which episodeInSeason: Int) -> [String]? {
+        guard let list = list else { return nil }
+        
+        var selectedEpisodeCharacters: [String]? = nil
+        
+        list.forEach { episode in
+            if Int(episode.episodeSeason) == season,
+               Int(episode.episodeInSeason) == episodeInSeason,
+               episode.episodeSeries == "Breaking Bad" {
+                selectedEpisodeCharacters = episode.episodeCharacters
+            }
+        }
+        
+        return selectedEpisodeCharacters
+    }
+    
 }
