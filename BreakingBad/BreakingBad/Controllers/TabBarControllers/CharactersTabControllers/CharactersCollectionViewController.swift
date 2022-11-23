@@ -18,6 +18,8 @@ final class CharactersCollectionViewController: BaseViewController {
             collectionViewCharacters.reloadData()
         }
     }
+    
+    private var selectedCharacterName: String?
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -30,6 +32,13 @@ final class CharactersCollectionViewController: BaseViewController {
             guard let self = self else { return }
             self.indicator.stopAnimating()
             self.characters = characters
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToCharacterDetail" {
+            guard let vcCharacterDetail = segue.destination as? CharacterDetailViewController else { return }
+            vcCharacterDetail.detailedCharacterName = selectedCharacterName
         }
     }
 
@@ -45,6 +54,11 @@ extension CharactersCollectionViewController: UICollectionViewDelegate, UICollec
         let cell = collectionViewCharacters.dequeueReusableCell(withReuseIdentifier: "CharacterCollectionViewCell", for: indexPath) as! CharacterCollectionViewCell
         cell.configure(characterName: characters?[indexPath.row].characterName ?? "")
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCharacterName = characters?[indexPath.row].characterName
+        performSegue(withIdentifier: "segueToCharacterDetail", sender: nil)
     }
     
 }
