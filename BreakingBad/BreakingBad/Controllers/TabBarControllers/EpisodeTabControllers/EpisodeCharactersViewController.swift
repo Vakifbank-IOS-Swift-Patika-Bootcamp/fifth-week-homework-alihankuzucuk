@@ -37,7 +37,7 @@ final class EpisodeCharactersViewController: BaseViewController {
 
     // MARK: - Methods
     @IBAction func btnCloseClicked(_ sender: Any) {
-        delegate?.btnCloseEpisodeCharactersViewClicked()
+        delegate?.btnCloseEpisodeCharactersClicked()
         self.dismiss(animated: true)
     }
 }

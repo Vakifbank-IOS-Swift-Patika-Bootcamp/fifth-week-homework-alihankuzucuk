@@ -8,5 +8,5 @@
 import Foundation
 
 protocol EpisodeListViewControllerProtocol: AnyObject {
-    func btnCloseEpisodeCharactersViewClicked()
+    func btnCloseEpisodeCharactersClicked()
 }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeCharactersPopUpView" customModule="BreakingBad" customModuleProvider="target">
+            <connections>
+                <outlet property="btnClose" destination="0lG-dg-uxl" id="brN-rL-zEz"/>
+                <outlet property="lblCharacterNames" destination="tcD-eR-NE5" id="EP7-0x-wZD"/>
+                <outlet property="viewPopUpBackground" destination="dUH-fe-f0E" id="msx-0h-NSk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EpisodeCharactersPopUpView" customModule="BreakingBad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-fe-f0E">
+                    <rect key="frame" x="76.000000000000014" y="316" width="241.33333333333337" height="220.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcD-eR-NE5">
+                            <rect key="frame" x="100" y="100" width="41.333333333333343" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lG-dg-uxl">
+                            <rect key="frame" x="164.33333333333334" y="10" width="67" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                            <connections>
+                                <action selector="btnCloseClicked:" destination="-1" eventType="touchUpInside" id="Vli-jC-bsq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="tcD-eR-NE5" firstAttribute="top" secondItem="dUH-fe-f0E" secondAttribute="top" constant="100" id="8rD-OU-ivr"/>
+                        <constraint firstItem="tcD-eR-NE5" firstAttribute="leading" secondItem="dUH-fe-f0E" secondAttribute="leading" constant="100" id="DHw-U9-Ypz"/>
+                        <constraint firstAttribute="trailing" secondItem="0lG-dg-uxl" secondAttribute="trailing" constant="10" id="Rjo-nL-dqE"/>
+                        <constraint firstAttribute="trailing" secondItem="tcD-eR-NE5" secondAttribute="trailing" constant="100" id="fCA-tx-ibx"/>
+                        <constraint firstAttribute="bottom" secondItem="tcD-eR-NE5" secondAttribute="bottom" constant="100" id="rAC-xt-95K"/>
+                        <constraint firstItem="0lG-dg-uxl" firstAttribute="top" secondItem="dUH-fe-f0E" secondAttribute="top" constant="10" id="ypb-KA-mdU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dUH-fe-f0E" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LzN-La-Ssb"/>
+                <constraint firstItem="dUH-fe-f0E" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gAt-gf-M72"/>
+            </constraints>
+            <connections>
+                <outlet property="btnClose" destination="0lG-dg-uxl" id="rma-Rd-sDH"/>
+                <outlet property="lblCharacterNames" destination="tcD-eR-NE5" id="FGf-aY-ifj"/>
+            </connections>
+            <point key="canvasLocation" x="130.53435114503816" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

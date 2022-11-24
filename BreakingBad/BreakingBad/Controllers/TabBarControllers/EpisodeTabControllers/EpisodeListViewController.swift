@@ -46,10 +46,8 @@ final class EpisodeListViewController: BaseViewController, EpisodeListViewContro
     }
     
     // MARK: - Methods
-    func btnCloseEpisodeCharactersViewClicked() {
-        showAlertView(title: "Delegate Triggered", message: "EpisodeCharactersView screen closed") {
-            print("Delegate Triggered - EpisodeCharactersView screen closed")
-        }
+    func btnCloseEpisodeCharactersClicked() {
+        print("Delegate Triggered")
     }
 
 }
@@ -81,8 +79,24 @@ extension EpisodeListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedEpisodeCharacters = EpisodeModelUtility.getEpisodeCharactersOf(list: episodes, in: indexPath.section + 1, which: indexPath.row + 1)
-        performSegue(withIdentifier: "segueEpisodeCharacters", sender: nil)
+        var popUpEpisodeCharacters: EpisodeCharactersPopUpView!
+        var selectedEpisodeCharacters = EpisodeModelUtility.getEpisodeCharactersOf(list: self.episodes, in: indexPath.section + 1, which: indexPath.row + 1)
+        
+        popUpEpisodeCharacters = EpisodeCharactersPopUpView(frame: self.view.frame, characterNames: selectedEpisodeCharacters)
+        //self.popUpEpisodeCharacters.btnClose.addTarget(self, action: #selector(), for: .touchUpInside)
+        popUpEpisodeCharacters.delegate = self
+        self.view.addSubview(popUpEpisodeCharacters)
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let tableViewActionShowSelectedEpisodeCharacters = UITableViewRowAction(style: .normal, title: "Episode Characters") { _, indexPath in
+            self.selectedEpisodeCharacters = EpisodeModelUtility.getEpisodeCharactersOf(list: self.episodes, in: indexPath.section + 1, which: indexPath.row + 1)
+            self.performSegue(withIdentifier: "segueEpisodeCharacters", sender: nil)
+        }
+        
+        tableViewActionShowSelectedEpisodeCharacters.backgroundColor = .blue
+        
+        return [tableViewActionShowSelectedEpisodeCharacters]
     }
     
 }
