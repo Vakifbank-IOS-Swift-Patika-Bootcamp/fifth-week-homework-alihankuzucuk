@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActivityIndicatorView()
-        prepareView()
+        // prepareView() // Causes some interface bugs with Xcode 14.1
     }
     
     // MARK: - Methods
