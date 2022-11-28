@@ -80,7 +80,7 @@ extension EpisodeListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var popUpEpisodeCharacters: EpisodeCharactersPopUpView!
-        var selectedEpisodeCharacters = EpisodeModelUtility.getEpisodeCharactersOf(list: self.episodes, in: indexPath.section + 1, which: indexPath.row + 1)
+        let selectedEpisodeCharacters = EpisodeModelUtility.getEpisodeCharactersOf(list: self.episodes, in: indexPath.section + 1, which: indexPath.row + 1)
         
         popUpEpisodeCharacters = EpisodeCharactersPopUpView(frame: self.view.frame, characterNames: selectedEpisodeCharacters)
         //self.popUpEpisodeCharacters.btnClose.addTarget(self, action: #selector(), for: .touchUpInside)

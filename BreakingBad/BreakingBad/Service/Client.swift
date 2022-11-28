@@ -16,6 +16,7 @@ final class Client {
         case getCharacterQuotes(String)
         case getAllEpisodes
         case getCharacterDetail(String)
+        case getEpisodeById(Int)
 
         var stringValue: String {
             switch self {
@@ -29,6 +30,8 @@ final class Client {
                 case .getCharacterDetail(let characterName):
                     let characterNameUrlEncoded = characterName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
                     return Endpoints.base + "/characters?name=\(characterNameUrlEncoded ?? "")"
+                case .getEpisodeById(let episodeId):
+                    return Endpoints.base + "/episodes/\(episodeId)"
             }
         }
 
@@ -95,6 +98,16 @@ final class Client {
     
     class func getCharacterDetail(of name: String, completion: @escaping ([CharacterDetailModel]?, Error?) -> Void) {
         taskForGETRequest(url: Endpoints.getCharacterDetail(name).url, responseType: [CharacterDetailModel].self) { response, error in
+            if let response = response {
+                completion(response, nil)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    class func getEpisodeBy(id episodeId: Int, completion: @escaping ([EpisodeModel]?, Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.getEpisodeById(episodeId).url, responseType: [EpisodeModel].self) { response, error in
             if let response = response {
                 completion(response, nil)
             } else {
