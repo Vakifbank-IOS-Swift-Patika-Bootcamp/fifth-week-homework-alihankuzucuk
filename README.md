@@ -1,40 +1,33 @@
-# fourth-week-homework
+# fifth-week-homework
 
-1- https://breakingbadapi.com/  API kullanılarak bir uygulama geliştirilecektir. Aşağıda detaylar verilmiştir.
---
+## 1- Breaking Bad api uygulamamıza persistant özelliği kazandıracağız.
 
-• Uygulama tablı yapıda olacaktır.(Açılış tabbar) ve 3 ayrı tab olacaktır.
-• Activity indicator kullanılmalıdır.
-• Alert gösterimi yapılmalıdır.
+### Uygulamamıza Yeni bir tab ekleyeceğiz: Notlar
 
-## 1.Tab - Karakterler:
+• Ekranda bölümlerden aldığımız notların listesi olacak.
 
-• Bu ekranda karakterler listelenecektir.
-• CollectionViewda en az karakterin ismi, doğum günü ve takma adı olacaktır.
-• Listeden karaktere bastığımda karakter detay ekranına yönlenmelidir.
+• Listeden sola kaydırarak eleman silebilmeliyiz.
 
-Karakter Detay Ekranı:
+• Floating button şeklinde ekle butonumuz olacak.
 
-• Karakterin görseli ile birlikte en az 4 bilgisi yer almalıdır.
-• Ekranda bir button olmalı ve bu button karakterin sözleri(alıntıları) ekranına yönlenmelidir.
+• Ekle butonuna bastığımızda ekle/düzenle ekranı present edilecek. Boş bilgiler
 
-Karakterin Sözleri-Alıntıları Ekranı:
+• Listeden item seçtiğimizde ekle/düzenle ekranı present edilecek. Seçtiğimiz item bilgileri ile.
 
-• Ekranda karakterin sözleri-alıntıları listelenmelidir.
+### Ekleme/Düzenleme Ekranı
 
-## 2.Tab - Bölümler:
+• Ekleme ekranında sezon, bölüm bilgisi girip notumuzu yazacağız.
 
-• Ekranda bölümler listelenmelidir.
-• TableViewda en az ismi ve sezonu bulunmalıdır.
-• Listeden bölüme bastığımda ekranın üstünde bir detay view açılmalıdır.(ViewController değil View olacak).
-• View üzerinde bölümdeki oyuncular yer almalı sağ üst köşede kapat butonu olmalı.
-• Kapat butonu aksiyonu delegate ile yönetilebilmelidir.(Kapata bastığımda liste ekranında print yazılması yeterlidir.)
+• Ekleme ekranındaki kaydet butonu ile CoreData üzerinde kayıt edeceğiz.
 
-## 3.Tab- IMDB Sayfası
+• Eğer item düzenleme ile gelindiyse ilgili not update edilmelidir.
+
+
+### 2- Clean Code - 5, 6, 7, 8 chapterlar özetlenmelidir.
+
+### 3- Crack the Interviews - 1, 2, 3 Çalışılacak.
  
-• Ekranda Webview ile IMDBde dizinin sayfası açılmalıdır.
+### 4- Leet Code üzerinden seçilmiş 3 soru çözülecek ve soruya ait görseller repoya eklenecek. 
+Soru çözüldükten sonra submission kısmından görseli alabilirsiniz. Örn:
 
-2- Clean Code - 1, 2, 3, 4 chapterlar özetlenmelidir.
---
-
-Kolay gelsin :)
+<img width="584" alt="image" src="https://user-images.githubusercontent.com/65663370/204152185-1f073bb2-4e0d-4466-b29f-61adcbe15a8f.png">
