@@ -31,3 +31,8 @@
 Soru çözüldükten sonra submission kısmından görseli alabilirsiniz. Örn:
 
 <img width="584" alt="image" src="https://user-images.githubusercontent.com/65663370/204152185-1f073bb2-4e0d-4466-b29f-61adcbe15a8f.png">
+
+<img alt="image" src="./LeetCode/leetcode-1.png">
+<img alt="image" src="./LeetCode/leetcode-2.png">
+<img alt="image" src="./LeetCode/leetcode-3.png">
+<img alt="image" src="./LeetCode/leetcode-4.png">
